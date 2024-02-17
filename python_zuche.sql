@@ -252,19 +252,6 @@ CREATE TABLE `b_address`  (
 -- Records of b_address
 -- ----------------------------
 
--- ----------------------------
--- Table structure for b_banner
--- ----------------------------
-DROP TABLE IF EXISTS `b_banner`;
-CREATE TABLE `b_banner`  (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `image` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `create_time` datetime(6) NULL DEFAULT NULL,
-  `thing_id` bigint(20) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  INDEX `b_banner_thing_id_3f307d00_fk_b_thing_id`(`thing_id`) USING BTREE,
-  CONSTRAINT `b_banner_thing_id_3f307d00_fk_b_thing_id` FOREIGN KEY (`thing_id`) REFERENCES `b_thing` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of b_banner
